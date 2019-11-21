@@ -1,0 +1,148 @@
+body {
+    background: #18181E;
+    color: #ffffff;
+    font-family: 'Fira Code', monospace;
+}
+
+.container {
+    width: 650px;
+    overflow: hidden;
+    position: absolute;
+    border-radius: 3px;
+    font-size: 18px;
+    border: 1px solid #ffffff;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+.container .rows {
+    width: 600px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.rows .row {
+    width: 100%;
+    position: relative;
+}
+
+.welcome {
+    height: 20px;
+    line-height: 40px;
+    text-align: center;
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+.image {
+    width: 30%;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: space-between;
+    text-indent: 20px;
+    font-size: 16px;
+    white-space: nowrap;
+    margin-top: 5px;
+}
+
+.row .field {
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.field .title {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.field .value {
+    margin: 0;
+    font-size: 14px;
+    margin-right: 20px;
+    overflow-wrap: break-word;
+}
+
+.field input {
+    border: 1px solid #ffffff;
+    background: #18181E;
+    color: #ffffff;
+    width: calc(97% - 40px);
+    padding: 4px;
+}
+
+.row .sub-section {
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #ffffff;
+    overflow: hidden;
+}
+
+.container .buttons {
+    width: 600px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.buttons .save {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    display: inline-block;
+    border: 1px solid #ffffff;
+    box-sizing: border-box;
+    background: #18181E;
+    text-align: center;
+    padding: 8px;
+    border-color: #1EEC7C;
+    color: #1EEC7C;
+}
+
+@media screen and (max-width: 700px) {
+    body {
+        padding-bottom: 20px;
+    }
+    .container,
+    .container {
+        overflow: auto;
+        height: calc(100% - 60px);
+        width: calc(100% - 60px);
+    }
+    .container .rows {
+        height: calc(100% - 60px);
+        width: calc(100% - 60px);
+        margin-bottom: 260px
+    }
+    .rows .row {
+        margin-bottom: 20px;
+    }
+    .container .buttons {
+        width: calc(100% - 60px);
+    }
+    .row .image {
+        width: calc(40% - 20px)
+    }
+    .container .rows
+	{
+		flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 325px) {
+    .welcome {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Vision Checkout Assistant",
+  "version": "0.0.1",
+  "background": {
+    "scripts": [
+      "background.js"
+    ],
+    "persistent": true
+  },
+  "browser_action": {
+    "default_icon": "./images/vision.png"
+  },
+  "options_page": "./views/options.html",
+  "permissions": [
+    "storage",
+    "tabs",
+    "identity",
+    "webRequest",
+    "*://developer.mozilla.org/",
+    "https://admin.triviapost.in"
+  ],
+  "key": "Z2l6bW9jaGVja291dGFzc2lzdGFudA==",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "./scripts/jquery-2.1.3.min.js"
+      ],
+      "all_frames": true
+    }
+  ]
+}
